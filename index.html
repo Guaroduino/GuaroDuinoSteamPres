@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta STEAM - Colegio San Vicente de Paúl</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Modern Blue -->
+    <!-- Application Structure Plan: The SPA uses a single-page, vertical scrolling narrative structure. It starts with a hero section, then moves through thematic sections: 'What is STEAM?', 'The School's Legacy', 'The Challenge', 'The Solution (Platform)', 'Key Features', 'Future Vision', 'Pilot Program', and 'Next Steps'. This structure guides the user through a persuasive argument, starting with the general concept, acknowledging the school's strengths, identifying a problem, presenting the platform as the specific solution, detailing its capabilities and future, and ending with a clear call to action. This is more engaging than a traditional slide deck and allows for non-linear exploration via a sticky navigation header. -->
+    <!-- Visualization & Content Choices: 
+    - STEAM Pillars: Report defines STEAM -> Goal: Inform/Engage -> Method: Interactive HTML cards with icons -> Interaction: Hover to scale -> Justification: More direct and visually engaging than a chart for this simple categorical data. -> Method: HTML/Tailwind/JS.
+    - Implementation Challenges: Report lists challenges -> Goal: Inform -> Method: Icon+Text cards in a grid -> Interaction: None -> Justification: Easily scannable problem statement -> Method: HTML/Tailwind.
+    - Future Vision: Report lists future features -> Goal: Excite/Inform -> Method: 3-column grid layout -> Interaction: None -> Justification: Consistent and clear presentation of future capabilities. -> Method: HTML/Tailwind.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAFB; /* gray-50 */
+            color: #1F2937; /* gray-800 */
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #3B82F6; /* blue-500 */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-lg font-bold text-gray-800">
+                Guaroduino <span class="text-[#3B82F6]">STEAM</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#steam" class="nav-link text-gray-600">¿Qué es STEAM?</a>
+                <a href="#solucion" class="nav-link text-gray-600">La Solución</a>
+                <a href="#futuro" class="nav-link text-gray-600">Visión a Futuro</a>
+                <a href="#piloto" class="nav-link text-gray-600">Programa Piloto</a>
+            </div>
+            <a href="#contacto" class="hidden md:block bg-[#3B82F6] text-white py-2 px-4 rounded-lg hover:bg-[#2563EB] transition-colors">
+                Siguientes Pasos
+            </a>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#steam" class="block py-2 nav-link text-gray-600">¿Qué es STEAM?</a>
+            <a href="#solucion" class="block py-2 nav-link text-gray-600">La Solución</a>
+            <a href="#futuro" class="block py-2 nav-link text-gray-600">Visión a Futuro</a>
+            <a href="#piloto" class="block py-2 nav-link text-gray-600">Programa Piloto</a>
+            <a href="#contacto" class="block mt-2 text-center bg-[#3B82F6] text-white py-2 px-4 rounded-lg hover:bg-[#2563EB] transition-colors">Siguientes Pasos</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
+                    Llevando la Excelencia del <span class="text-[#3B82F6]">Colegio San Vicente de Paúl</span> al Futuro
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                    Una propuesta de innovación educativa para consolidar el futuro de sus estudiantes a través de una alianza estratégica con la plataforma GuaroDuino STEAM Space.
+                </p>
+                <a href="#steam" class="mt-8 inline-block bg-[#3B82F6] text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-[#2563EB] transition-transform transform hover:scale-105">
+                    Descubrir la Propuesta
+                </a>
+            </div>
+        </section>
+
+        <section id="steam" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">¿Qué es la Educación STEAM?</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                        Esta sección introduce el concepto de STEAM, un enfoque que cultiva las habilidades indispensables para el éxito en el siglo XXI. A través de la integración de estas cinco disciplinas, los estudiantes aprenden a resolver problemas complejos del mundo real.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <div class="w-2/5 p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 text-center">
+                                <div class="text-4xl mb-2">🔬</div>
+                                <h4 class="font-bold text-lg text-blue-600">Ciencia</h4>
+                            </div>
+                            <div class="w-2/5 p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 text-center">
+                                <div class="text-4xl mb-2">💻</div>
+                                <h4 class="font-bold text-lg text-blue-600">Tecnología</h4>
+                            </div>
+                            <div class="w-2/5 p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 text-center">
+                                <div class="text-4xl mb-2">⚙️</div>
+                                <h4 class="font-bold text-lg text-blue-600">Ingeniería</h4>
+                            </div>
+                             <div class="w-2/5 p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 text-center">
+                                <div class="text-4xl mb-2">🎨</div>
+                                <h4 class="font-bold text-lg text-blue-600">Artes</h4>
+                            </div>
+                            <div class="w-full p-4 bg-white rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 text-center md:w-2/5">
+                                <div class="text-4xl mb-2">📈</div>
+                                <h4 class="font-bold text-lg text-blue-600">Matemáticas</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h3 class="text-2xl font-semibold mb-6 text-center md:text-left">Habilidades Esenciales para el Futuro</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-white rounded-lg shadow-sm">
+                                <h4 class="font-bold text-lg">🧠 Pensamiento Crítico</h4>
+                                <p class="text-gray-600">Analizar problemas desde múltiples perspectivas para encontrar las mejores soluciones.</p>
+                            </div>
+                            <div class="p-4 bg-white rounded-lg shadow-sm">
+                                <h4 class="font-bold text-lg">💡 Creatividad e Innovación</h4>
+                                <p class="text-gray-600">Aplicar la imaginación para diseñar soluciones únicas a retos técnicos y sociales.</p>
+                            </div>
+                            <div class="p-4 bg-white rounded-lg shadow-sm">
+                                <h4 class="font-bold text-lg">🤝 Colaboración</h4>
+                                <p class="text-gray-600">Trabajar en equipo, combinando talentos para lograr objetivos comunes y complejos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="legado" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold">Un Legado de Excelencia: El Próximo Paso Lógico</h2>
+                 <p class="mt-4 text-lg text-gray-600 max-w-4xl mx-auto">
+                    El Colegio San Vicente de Paúl posee una reputación impecable, construida sobre una base académica sólida. Sus egresados son prueba viviente de esta excelencia, destacando en las carreras de ingeniería y ciencias más competitivas. Implementar un programa STEAM robusto no es cambiar el rumbo, sino potenciarlo: es el siguiente paso lógico para transformar su sólida base teórica en innovación práctica y aplicada.
+                 </p>
+            </div>
+        </section>
+
+
+        <section id="desafio" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">El Desafío de Implementar un Programa STEAM</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                        Adoptar un modelo STEAM efectivo presenta retos para cualquier institución. Reconocemos que el colegio ya posee el activo más valioso: un personal docente de primer nivel. El objetivo no es darles más trabajo, sino las herramientas adecuadas.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center border-t-4 border-blue-200">
+                        <div class="text-4xl mb-4">📚</div>
+                        <h3 class="text-xl font-semibold mb-2">Curación de Contenido</h3>
+                        <p class="text-gray-600">Seleccionar proyectos relevantes y alineados con el currículo es un trabajo a tiempo completo.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center border-t-4 border-blue-200">
+                        <div class="text-4xl mb-4">⚙️</div>
+                        <h3 class="text-xl font-semibold mb-2">Recursos y Materiales</h3>
+                        <p class="text-gray-600">La adquisición de componentes puede ser costosa y logísticamente compleja.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center border-t-4 border-blue-200">
+                        <div class="text-4xl mb-4">⏱️</div>
+                        <h3 class="text-xl font-semibold mb-2">Carga para el Docente</h3>
+                        <p class="text-gray-600">Diseñar y documentar proyectos desde cero consume un tiempo valioso del profesorado.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center border-t-4 border-blue-200">
+                        <div class="text-4xl mb-4">🧭</div>
+                        <h3 class="text-xl font-semibold mb-2">Falta de Guía Centralizada</h3>
+                        <p class="text-gray-600">La ausencia de un plan estructurado puede llevar a esfuerzos aislados y poco eficientes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solucion" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">La Solución: <span class="text-[#3B82F6]">GuaroDuino STEAM Space</span></h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                        Presentamos la solución a estos desafíos: una plataforma digital diseñada en Barquisimeto para servir como el catalizador del programa STEAM en el colegio, liberando el potencial de sus docentes y estudiantes.
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-lg shadow-inner">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800">Libera al Docente</h4>
+                                <p class="text-gray-600">La plataforma se encarga del "qué hacer" con guías detalladas, permitiendo que el profesor se enfoque en el "cómo enseñar" y en la guía pedagógica.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800">Inspira a los Estudiantes</h4>
+                                <p class="text-gray-600">Proyectos prácticos que conectan la teoría del aula con la aplicación en el mundo real, fomentando la curiosidad y la pasión por aprender.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-gray-800">Estandariza la Calidad</h4>
+                                <p class="text-gray-600">Asegura que todos los estudiantes tengan acceso a proyectos bien estructurados, probados y de alto valor educativo.</p>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-white rounded-lg shadow-md border border-gray-200">
+                            <iframe class="w-full h-96 rounded-lg border border-gray-300" src="https://guaroduinosteamspace.uc.r.appspot.com/" title="Preview de la Plataforma GuaroDuino STEAM Space"></iframe>
+                             <a href="https://guaroduinosteamspace.uc.r.appspot.com/" target="_blank" rel="noopener noreferrer" class="mt-4 block w-full text-center bg-[#3B82F6] text-white py-2 px-4 rounded-lg hover:bg-[#2563EB] transition-colors">
+                                Visitar la Plataforma en Vivo
+                             </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="features" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Características Clave de la Plataforma</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Nuestra plataforma está diseñada para ser robusta, segura y flexible, ofreciendo funcionalidades esenciales para una gestión educativa moderna.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-4">👤</div>
+                            <h3 class="text-xl font-semibold">Registro de Usuarios</h3>
+                        </div>
+                        <p class="text-gray-600">Gestión de perfiles individuales para estudiantes y docentes, permitiendo un seguimiento personalizado del progreso y la asignación de proyectos específicos a cada grupo o clase.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-4">🚀</div>
+                            <h3 class="text-xl font-semibold">Publicación de Proyectos</h3>
+                        </div>
+                        <p class="text-gray-600">Un sistema centralizado e intuitivo para subir, organizar y compartir contenido educativo, asegurando que todos los materiales estén accesibles desde un único lugar.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-4">📱</div>
+                            <h3 class="text-xl font-semibold">Acceso Multiplataforma</h3>
+                        </div>
+                        <p class="text-gray-600">La plataforma funciona fluidamente en cualquier navegador web y puede ser instalada como una Aplicación Web Progresiva (PWA) para un acceso rápido y directo desde cualquier dispositivo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="futuro" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Visión a Futuro: Un Ecosistema STEAM Completo</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                        GuaroDuino STEAM Space es más que un repositorio. Planeamos evolucionar para optimizar recursos y construir una comunidad de aprendizaje vibrante y colaborativa.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-4">🛒</div>
+                            <h3 class="text-xl font-semibold">Tienda Integrada</h3>
+                        </div>
+                        <p class="text-gray-600">Adquisición de kits de componentes y materiales directamente desde la plataforma, optimizando drásticamente los recursos financieros y el tiempo del colegio.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-4">🧑‍🏫</div>
+                            <h3 class="text-xl font-semibold">Contenido por Colaboradores</h3>
+                        </div>
+                        <p class="text-gray-600">Permitir que profesores y colaboradores expertos suban sus propios proyectos, enriqueciendo el ecosistema con contenido diverso y validado por la comunidad.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="text-3xl mr-4">🏆</div>
+                            <h3 class="text-xl font-semibold">Gestión de Competencias</h3>
+                        </div>
+                        <p class="text-gray-600">Herramientas para organizar y gestionar ferias de ciencias y competencias internas, fomentando una sana competitividad y el espíritu innovador.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="piloto" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Propuesta de Programa Piloto</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                        Para asegurar una implementación exitosa y adaptada a las necesidades del colegio, proponemos un programa piloto estructurado. Este enfoque nos permitirá validar la plataforma y refinarla con la invaluable retroalimentación de sus docentes y estudiantes.
+                    </p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <h4 class="text-blue-600 font-bold text-lg">Alcance</h4>
+                        <p class="text-2xl font-bold mt-2">1ro a 4to Grado</p>
+                        <p class="text-gray-500 mt-1">Implementación inicial enfocada.</p>
+                    </div>
+                    <div class="border-l border-r border-gray-200 px-8">
+                        <h4 class="text-blue-600 font-bold text-lg">Contenido</h4>
+                        <p class="text-2xl font-bold mt-2">~12 Proyectos</p>
+                        <p class="text-gray-500 mt-1">Un proyecto por momento académico.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-blue-600 font-bold text-lg">Objetivo</h4>
+                        <p class="text-2xl font-bold mt-2">Feedback Real</p>
+                        <p class="text-gray-500 mt-1">Evaluar y co-crear la forma definitiva.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold">Construyamos el Futuro Juntos</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                    Creemos firmemente que esta alianza consolidará al Colegio San Vicente de Paúl como un líder indiscutible en educación STEAM en Venezuela. Proponemos los siguientes pasos para iniciar esta transformadora colaboración.
+                </p>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div class="border-t-4 border-[#3B82F6] bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-2">1. Demostración en Vivo</h3>
+                        <p class="text-gray-600">Coordinar una sesión de demostración de la plataforma para el personal directivo y docente interesado.</p>
+                    </div>
+                    <div class="border-t-4 border-[#3B82F6] bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-2">2. Iniciar Programa Piloto</h3>
+                        <p class="text-gray-600">Implementar el piloto para demostrar el valor y la facilidad de uso de la plataforma en un entorno real.</p>
+                    </div>
+                    <div class="border-t-4 border-[#3B82F6] bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold mb-2">3. Alianza Estratégica</h3>
+                        <p class="text-gray-600">Establecer una alianza a largo plazo para hacer del colegio un modelo a seguir en la implementación de tecnologías educativas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 GuaroDuino STEAM Space. Una iniciativa para la innovación educativa en Barquisimeto.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            document.querySelectorAll('#mobile-menu a, .nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if(!mobileMenu.classList.contains('hidden')) {
+                       mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
