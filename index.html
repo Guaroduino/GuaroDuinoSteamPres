@@ -28,6 +28,15 @@
         .nav-link:hover {
             color: #3B82F6; /* blue-500 */
         }
+        .flow-arrow {
+            position: absolute;
+            top: 50%;
+            right: -2.5rem;
+            transform: translateY(-50%);
+            color: #9CA3AF; /* gray-400 */
+            width: 2rem;
+            height: 2rem;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -39,8 +48,8 @@
             </div>
             <div class="hidden md:flex space-x-8">
                 <a href="#steam" class="nav-link text-gray-600">¿Qué es STEAM?</a>
-                <a href="#solucion" class="nav-link text-gray-600">La Solución</a>
-                <a href="#futuro" class="nav-link text-gray-600">Visión a Futuro</a>
+                <a href="#facilitador" class="nav-link text-gray-600">El Rol Docente</a>
+                <a href="#solucion" class="nav-link text-gray-600">Nuestra Herramienta</a>
                 <a href="#piloto" class="nav-link text-gray-600">Programa Piloto</a>
             </div>
             <a href="#contacto" class="hidden md:block bg-[#3B82F6] text-white py-2 px-4 rounded-lg hover:bg-[#2563EB] transition-colors">
@@ -52,8 +61,8 @@
         </nav>
         <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
             <a href="#steam" class="block py-2 nav-link text-gray-600">¿Qué es STEAM?</a>
-            <a href="#solucion" class="block py-2 nav-link text-gray-600">La Solución</a>
-            <a href="#futuro" class="block py-2 nav-link text-gray-600">Visión a Futuro</a>
+            <a href="#facilitador" class="block py-2 nav-link text-gray-600">El Rol Docente</a>
+            <a href="#solucion" class="block py-2 nav-link text-gray-600">Nuestra Herramienta</a>
             <a href="#piloto" class="block py-2 nav-link text-gray-600">Programa Piloto</a>
             <a href="#contacto" class="block mt-2 text-center bg-[#3B82F6] text-white py-2 px-4 rounded-lg hover:bg-[#2563EB] transition-colors">Siguientes Pasos</a>
         </div>
@@ -137,7 +146,6 @@
             </div>
         </section>
 
-
         <section id="desafio" class="py-16 md:py-24">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
@@ -171,12 +179,80 @@
             </div>
         </section>
 
+        <section id="facilitador" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold">El Docente como Facilitador: Jugando de Manera Científica</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                        El rol del docente en STEAM evoluciona. Se trata de pasar de ser un "sabio en el estrado" a un "guía en el camino". El objetivo no es dar respuestas, sino facilitar el proceso de descubrimiento y cultivar la curiosidad innata de los estudiantes.
+                    </p>
+                    <blockquote class="mt-8 italic text-gray-500 max-w-2xl mx-auto border-l-4 border-gray-300 pl-4">
+                        "La ciencia es una forma de pensar mucho más que un cuerpo de conocimiento."
+                        <footer class="mt-2 text-sm text-right not-italic">- Carl Sagan</footer>
+                    </blockquote>
+                </div>
+
+                <div class="text-center mb-12">
+                     <h3 class="text-2xl md:text-3xl font-semibold">El Ciclo del Juego Científico</h3>
+                </div>
+
+                <div class="relative flex flex-col md:flex-row items-start justify-center gap-y-12 md:gap-y-0 md:gap-x-8">
+                    <!-- Step 1 -->
+                    <div class="relative text-center w-44 flex flex-col items-center">
+                        <div class="bg-blue-100 text-blue-600 w-20 h-20 rounded-full flex items-center justify-center text-4xl mb-3">👐</div>
+                        <h4 class="font-bold">1. Exploración</h4>
+                        <p class="text-sm text-gray-500">Permitir que interactúen libremente con los materiales.</p>
+                        <div class="hidden md:block flow-arrow" style="right: -3rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                    </div>
+                     <!-- Step 2 -->
+                    <div class="relative text-center w-44 flex flex-col items-center">
+                        <div class="bg-blue-100 text-blue-600 w-20 h-20 rounded-full flex items-center justify-center text-4xl mb-3">🔍</div>
+                        <h4 class="font-bold">2. Observación</h4>
+                        <p class="text-sm text-gray-500">Guiar con preguntas: ¿Qué notaste? ¿Por qué crees que pasa?</p>
+                         <div class="hidden md:block flow-arrow" style="right: -3rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                    </div>
+                     <!-- Step 3 -->
+                    <div class="relative text-center w-64 flex flex-col items-center">
+                        <div class="bg-blue-100 text-blue-600 w-20 h-20 rounded-full flex items-center justify-center text-4xl mb-3">📝</div>
+                        <h4 class="font-bold">3. Registro Estructurado</h4>
+                        <div class="my-3 w-full bg-amber-100 border-l-4 border-amber-500 text-amber-800 p-3 rounded-md shadow text-left">
+                            <p class="text-sm font-semibold italic">"La única diferencia entre perder el tiempo y hacer ciencia es escribirlo."</p>
+                            <cite class="block text-right text-xs mt-1 not-italic">- Adam Savage, MythBusters</cite>
+                        </div>
+                        <p class="text-xs text-gray-500 italic mt-1">"La tinta más pálida es más fuerte que la mejor memoria."</p>
+                         <div class="hidden md:block flow-arrow" style="right: -3rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                    </div>
+                     <!-- Step 4 -->
+                    <div class="relative text-center w-44 flex flex-col items-center">
+                        <div class="bg-blue-100 text-blue-600 w-20 h-20 rounded-full flex items-center justify-center text-4xl mb-3">💡</div>
+                        <h4 class="font-bold">4. Hipótesis</h4>
+                        <p class="text-sm text-gray-500">Animar a predecir: ¿Qué pasaría si...?</p>
+                         <div class="hidden md:block flow-arrow" style="right: -3rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                    </div>
+                     <!-- Step 5 -->
+                    <div class="relative text-center w-44 flex flex-col items-center">
+                        <div class="bg-blue-100 text-blue-600 w-20 h-20 rounded-full flex items-center justify-center text-4xl mb-3">✅</div>
+                        <h4 class="font-bold">5. Conclusión</h4>
+                        <p class="text-sm text-gray-500">Probar y reflexionar sobre el resultado: ¿Qué aprendimos?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="solucion" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold">La Solución: <span class="text-[#3B82F6]">GuaroDuino STEAM Space</span></h2>
+                    <h2 class="text-3xl md:text-4xl font-bold"><span class="text-[#3B82F6]">GuaroDuino STEAM Space</span></h2>
                     <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                        Presentamos la solución a estos desafíos: una plataforma digital diseñada en Barquisimeto para servir como el catalizador del programa STEAM en el colegio, liberando el potencial de sus docentes y estudiantes.
+                        GuaroDuino STEAM Space es la herramienta digital que centraliza los proyectos y recursos, permitiendo a los docentes enfocarse en su verdadera pasión: guiar y facilitar el aprendizaje.
                     </p>
                 </div>
                 <div class="bg-gray-100 p-8 rounded-lg shadow-inner">
@@ -350,3 +426,6 @@
 
 </body>
 </html>
+
+
+
